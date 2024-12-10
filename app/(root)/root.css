@@ -1,0 +1,78 @@
+@tailwind utilities;
+
+@layer utilities {
+  .my-container {
+    @apply w-11/12 m-auto;
+  }
+  .glass {
+    @apply bg-card/30 backdrop-blur-3xl shadow-2xl;
+  }
+}
+
+header {
+  @apply my-container left-1/2 -translate-x-1/2 fixed top-4 border rounded-full z-50 bg-background/95 shadow-xl;
+  > div {
+    @apply my-container h-16 flex items-center justify-between;
+    nav {
+      @apply hidden md:block font-medium text-sm space-x-6;
+      span {
+        @apply cursor-pointer relative duration-500 after:absolute after:left-1/2 after:-translate-x-1/2 after:w-0 after:h-0.5 after:duration-500 after:bg-primary hover:after:w-full hover:text-primary after:-bottom-1;
+      }
+      .active {
+        @apply after:w-full text-primary;
+      }
+    }
+    div {
+      @apply flex items-center gap-2;
+    }
+  }
+}
+
+.swiper-slide {
+  @apply relative bg-cover bg-center bg-no-repeat;
+  .overlay {
+    @apply absolute inset-0 bg-white/40 hidden md:block;
+    clip-path: polygon(0 0, 80% 0, 70% 100%, 0 100%);
+  }
+  .content {
+    /* Gradient text */
+    @apply my-container relative z-10 flex h-full flex-col items-start justify-center;
+    p {
+      @apply mb-8 max-w-[600px] text-lg md:text-xl text-black/60;
+    }
+  }
+}
+
+.form-field {
+  @apply relative;
+  label {
+    @apply mb-2 block text-sm font-medium;
+  }
+  span {
+    @apply absolute -bottom-5;
+  }
+}
+
+.form-field-error {
+  input,
+  textarea {
+    @apply border-destructive placeholder:text-destructive;
+  }
+  span {
+    @apply text-sm text-destructive;
+  }
+}
+
+.conic-gradient {
+  @apply absolute block mix-blend-normal blur-[100px] inset-0 -z-[1];
+  background: conic-gradient(
+    from 180deg at 50% 50%,
+    #0a7cff 0deg,
+    #01ec4f 180deg,
+    #e92a67 2turn
+  );
+}
+
+h2 {
+  @apply mb-8 text-center text-3xl font-semibold;
+}
