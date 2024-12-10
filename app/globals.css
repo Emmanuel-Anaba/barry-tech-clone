@@ -57,3 +57,21 @@
     @apply bg-background text-foreground;
   }
 }
+
+* {
+  @apply scroll-smooth scroll-mt-20;
+  scrollbar-width: thin;
+  /* scrollbar-color: hsl(var(--border)) transparent; */
+}
+
+h1 {
+  @apply text-4xl font-bold leading-tight md:text-5xl lg:text-6xl;
+}
+
+svg {
+  @apply inline-block;
+}
+
+main > .theme-toggle {
+  @apply absolute top-4 right-4;
+}
