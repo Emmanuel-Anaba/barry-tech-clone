@@ -1,5 +1,5 @@
-# Landing Page Clone
-This repository contains a clone of ![Barry Tech](https://barry-tech.vercel.app) from ![this repo](https://github.com/DanielAgbeni/Barry-Tech).
+# Barry Tech Clone
+This repository contains a clone of [Barry Tech](https://barry-tech.vercel.app) from [this repo](https://github.com/DanielAgbeni/Barry-Tech).
 
 ## Technologies Used
 - **Next.js**: For building the React-based web application with server-side rendering and static generation.
