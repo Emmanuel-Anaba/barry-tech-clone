@@ -1,4 +1,4 @@
-import { FormFields } from "@/lib/lists";
+import { FormFields } from "@/lib/types";
 import * as y from "yup";
 
 // Find a better name for this hook
