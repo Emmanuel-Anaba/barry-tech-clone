@@ -7,6 +7,11 @@
   .glass {
     @apply bg-card/30 backdrop-blur-3xl shadow-2xl;
   }
+
+  .gradient-text {
+    @apply bg-gradient-to-tr from-[#0a7cff] to-[#01ec4f] bg-clip-text;
+    -webkit-text-fill-color: transparent;
+  }
 }
 
 header {
@@ -35,8 +40,10 @@ header {
     clip-path: polygon(0 0, 80% 0, 70% 100%, 0 100%);
   }
   .content {
-    /* Gradient text */
     @apply my-container relative z-10 flex h-full flex-col items-start justify-center;
+    h1 {
+      @apply gradient-text;
+    }
     p {
       @apply mb-8 max-w-[600px] text-lg md:text-xl text-black/60;
     }
